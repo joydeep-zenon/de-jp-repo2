@@ -1,0 +1,19 @@
+displayName: jptestproject
+projectKey: jptestproject
+version: 1.0.0
+modules:
+- fileSearchPaths:
+  - code
+  - taxonomy
+  name: common
+- fileSearchPaths:
+  - code
+  name: data
+  dependencies:
+  - common
+- fileSearchPaths:
+  - code
+  name: views
+  dependencies:
+  - common
+  - data
