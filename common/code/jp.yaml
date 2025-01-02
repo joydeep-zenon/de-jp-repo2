@@ -1,0 +1,15 @@
+library: jp
+
+views: 
+- name: test_view_jp_v1
+  engine: SPARK
+  transformations:
+  - as: listCollection
+    operation: listCollection
+  parameters:
+    debugEventPattern: 10
+  outputDefinition:
+    type: avro8
+    processors:
+    - for: avro8
+    parallelismStrategy: AUTO

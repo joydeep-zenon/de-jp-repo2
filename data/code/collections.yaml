@@ -6,4 +6,4 @@ collections:
   filePatterns:
   - "/home/deuser/workspaces/deintgtest/data/Spend_Test.csv"
   schema: schemas.spend_data_schema
-  header: true
+  header: false
