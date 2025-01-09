@@ -1,0 +1,25 @@
+library: data
+
+schemas: 
+- name: realestate_schema_magicbrick
+  columns:
+  - name: Broker Details
+    typeID: Common:String
+  - name: Facing
+    typeID: Common:String
+  - name: Floor
+    typeID: Common:String
+  - name: Locality
+    typeID: Common:String
+  - name: Per Unit Rate
+    typeID: Common:String
+  - name: Price Details
+    typeID: Common:String
+  - name: Project Name
+    typeID: Common:String
+  - name: Property Additional Details
+    typeID: Common:String
+  - name: Square Feet Area
+    typeID: Common:String
+  - name: Transaction Details
+    typeID: Common:String

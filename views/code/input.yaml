@@ -7,14 +7,13 @@ views:
   - as: readCollection
     operation: readCollection
     enforceSchema: true
-  - as: readCollection1
-    operation: readCollection
-    enforceSchema: true
-  - as: join
-    operation: join
-    left: readCollection
-    right: readCollection1
-    mode: FULL_OUTER
-    mergeLeftAndRightKeys: true
+    collection: data.collections.spend_data_coll
+  - as: selectFields
+    operation: selectFields
+    source: readCollection
+    foreach:
+      columns:
+      - Price Details
+      type: "Common:String"
   outputDefinition:
     type: delimited
