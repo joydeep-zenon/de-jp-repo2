@@ -17,4 +17,3 @@ modules:
   dependencies:
   - common
   - data
-insightVersion: StudioMVersion-0.0
