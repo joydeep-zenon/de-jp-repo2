@@ -1,0 +1,39 @@
+library: views_v1
+
+views: 
+- name: ppl_record_view
+  engine: SPARK
+  transformations:
+  - as: readCollection
+    operation: readCollection
+    enforceSchema: true
+    collection: schemas.ppl_records_collection
+  - as: dedup
+    operation: dedup
+    source: readCollection
+    groupKeys:
+    - UserId
+    sortKeys:
+    - Income asc
+    keep: NONE
+    rejectAs: duplicate_records
+  outputDefinition:
+    type: delimited
+  persist:
+    label: DEDUP_TEST_LABEL
+    historical:
+      mode: RECOMPUTE
+    variables:
+    - name: dedup
+    - name: duplicate_records
+- name: testing_view
+  engine: SPARK
+  transformations:
+  - as: readView
+    operation: readView
+    view: ppl_record_view
+    variant: ALL
+    label: DEDUP_TEST_LABEL
+  outputDefinition:
+    type: delimited
+    

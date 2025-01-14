@@ -1,0 +1,42 @@
+library: schemas
+
+collections: 
+- name: ppl_records_collection
+  header: true
+  format: delimitedFile
+  filePatterns:
+  - /home/deuser/workspaces/dejpexistingsol/jp_13-JAN_25/common/common/people-120-records_wo_space.csv
+  schema: ppl_records_schema
+- name: testing
+  header: true
+  format: delimitedFile
+  filePatterns: 
+  - /home/deuser/workspaces/dejpexistingsol/jp_13-JAN_25/common/common/people-120-records_wo_space.csv
+  autoSchemaDiscovery: true
+schemas: 
+- name: ppl_records_schema
+  columns:
+  - name: Index
+    typeID: Common:Integer
+  - name: UserId
+    typeID: Common:String
+  - name: FirstName
+    typeID: Common:String
+  - name: LastName
+    typeID: Common:String
+  - name: Sex
+    typeID: Common:String
+  - name: Email
+    typeID: Common:String
+  - name: Phone
+    typeID: Common:String
+  - name: Dateofbirth
+    typeID: Common:String
+  - name: JobTitle
+    typeID: Common:String
+  - name: Age
+    typeID: Common:Integer
+  - name: Income
+    typeID: Common:Integer
+  - name: TaxSubmitted
+    typeID: Common:Integer
