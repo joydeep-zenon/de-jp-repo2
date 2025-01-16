@@ -1,0 +1,6 @@
+Index,UserId,FirstName,LastName,Sex,Email,Phone,Dateofbirth,JobTitle,Age,Income,TaxSubmitted
+1,9CEA5eB6C5691e8,Ruth,Lucas,Female,buckshirley@example.net,001-440-057-2969x867,1/16/1931,"Therapist, occupational",93,6307687,1955383
+2,A7CCb36dCBeed5f,Clayton,Acevedo,Female,lesterjoe@example.net,(063)327-8014,9/5/1923,"Scientist, research (medical)",101,950730,66551
+3,1eDdd4F608701A9,Justin,Buckley,Female,mark74@example.net,(871)983-5432,2/13/1949,Government social research officer,75,1275582,63779
+4,1eDdd4F608701A9,Justin,Buckley,Female,mark74@example.net,(871)983-5432,2/13/1949,Government social research officer,75,1275582,63779
+5,C7C8B1CBa8a4f6F,Bryce,Murillo,Female,tasha54@example.com,695-038-2262,2/26/1972,"Engineer, manufacturing systems",52,3390453,678091

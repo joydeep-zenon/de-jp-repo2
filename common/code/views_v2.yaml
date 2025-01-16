@@ -1,0 +1,66 @@
+library: views_v2
+
+collections: 
+- name: geo_loc_collection
+  header: true
+  format: delimitedFile
+  filePatterns:
+  - /home/deuser/workspaces/dejpexistingsol/JP_15-JAN-25/common/small_DS/geo-loc-5-records.csv
+  schema: geo_loc_schema
+schemas: 
+- name: geo_loc_schema
+  columns:
+  - name: UserId
+    typeID: Common:String
+  - name: Address
+    typeID: Common:String
+  - name: City
+    typeID: Common:String
+  - name: State
+    typeID: Common:String
+  - name: SubscriptionPlan
+    typeID: Common:String
+  - name: SubscriptionAmount
+    typeID: Common:Integer
+  - name: SubscriptionTenureInMonths
+    typeID: Common:Integer
+  - name: SubscriptionTenureInYrs
+    typeID: Common:Float
+
+views: 
+- name: map_view
+  engine: SPARK
+  transformations:
+  - as: readCollection_ppl_records
+    operation: readCollection
+    enforceSchema: true
+    collection: schemas.ppl_records_collection
+  - as: readCollection_geo_loc
+    operation: readCollection
+    enforceSchema: true
+    collection: geo_loc_collection
+  - as: dedup_geo_loc
+    operation: dedup
+    source: readCollection_geo_loc
+    rejectAs: geo_loc_duplicate
+    keep: FIRST
+    groupKeys:
+    - UserId
+  - as: dedup_ppl_rec
+    operation: dedup
+    source: readCollection_ppl_records
+    rejectAs: ppl_records_duplicate
+    groupKeys:
+    - UserId
+    keep: FIRST
+  - as: join
+    operation: join
+    left: dedup_ppl_rec
+    right: dedup_geo_loc
+    mode: LEFT_SEMI
+    keys:
+    - leftKey: UserId
+      rightKey: UserId
+    mergeLeftAndRightKeys: false
+  outputDefinition:
+    type: delimited

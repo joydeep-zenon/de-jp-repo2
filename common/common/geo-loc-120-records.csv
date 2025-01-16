@@ -1,0 +1,122 @@
+UserId,Address,City,State,SubscriptionPlan,SubscriptionAmount,SubscriptionTenureInMonths,SubscriptionTenureInYrs
+9CEA5eB6C5691e8,7092 1st Lane,San Jose,California,Premium,1200,8,0.67
+A7CCb36dCBeed5f,3571 6th avenue Lane,Los Angeles,California,Enterprise,1600,12,1
+1eDdd4F608701A9,6546 2nd Ave,Los Angeles,California,Premium,1200,43,3.58
+f0765E2dc1F8e12,6206 3rd Blvd,Dallas,Texas,Basic,600,7,0.58
+C7C8B1CBa8a4f6F,3315 MG Road,Dallas,Texas,Basic,600,8,0.67
+ce7FF4A75F7218A,8687 4th Lane,Houston,Texas,Enterprise,1600,5,0.42
+F4a65B4C1c7Ff15,2822 Park Ln,Chicago,Illinois,Standard,900,39,3.25
+973ADddf47D14E0,4933 2nd Ave,Los Angeles,California,Basic,600,23,1.92
+29F3bD1AC4adCB7,5751 1st Lane,San Jose,California,Premium,1200,37,3.08
+5dfE6D3ABA312FE,9303 Back str market,Philadelphia,Pennsylvania,Basic,600,14,1.17
+FACCa1C0E6C6E43,4594 Lft Backward View,Houston,Texas,Standard,900,24,2
+adD40390D1158AE,2186 Back str market,San Antonio,Texas,Enterprise,1600,25,2.08
+f4FA8A4C936f322,8574 Main St,Houston,Texas,Basic,600,10,0.83
+0Df7BCDDe398C00,647 6th avenue Lane,Dallas,Texas,Enterprise,1600,36,3
+430eF2a5B45cD88,1989 3rd Blvd,Philadelphia,Pennsylvania,Standard,900,53,4.42
+381D3f8f4aF0f86,7002 4th Lane,Dallas,Texas,Premium,1200,11,0.92
+aDCEBA5f4c91EEA,4825 Back str market,Phoenix,Arizona,Enterprise,1600,12,1
+98cD5b95Bd55cBa,1171 Main St,Houston,Texas,Enterprise,1600,22,1.83
+fdEa2ee420dFf3e,3868 1st Lane,Los Angeles,California,Enterprise,1600,37,3.08
+ce616bBFA802e26,7283 4th Lane,Philadelphia,Pennsylvania,Premium,1200,44,3.67
+2c2f69a3Dee7c77,6977 Main St,Phoenix,Arizona,Enterprise,1600,3,0.25
+dbEcd6afc2ddA2D,8199 Lft Backward View,Philadelphia,Pennsylvania,Standard,900,2,0.17
+49D38D8a6Ac8308,4190 2nd Ave,New York,New York,Basic,600,56,4.67
+adB008dFDEF66F4,1555 3rd Blvd,New York,New York,Basic,600,5,0.42
+CC4b3fc842A8414,7339 3rd Ave,New York,New York,Basic,600,28,2.33
+5ab4575dE6fDd71,1367 1st Lane,San Diego,California,Enterprise,1600,3,0.25
+99644dBeEE363aD,5399 Lft Backward View,Los Angeles,California,Basic,600,42,3.5
+A6920abcF538405,6247 4th Lane,Phoenix,Arizona,Standard,900,36,3
+A9bCbB97DacAE10,2035 Lft Backward View,Chicago,Illinois,Premium,1200,22,1.83
+6C3CCC445B6bcD2,7244 2nd Ave,New York,New York,Standard,900,18,1.5
+c9F591AD2E29bc4,4122 1st Lane,Phoenix,Arizona,Basic,600,51,4.25
+1F1b9bdFBF39b8f,9041 4th Lane,Los Angeles,California,Enterprise,1600,31,2.58
+c73398Ac3EEc292,9035 Main St,San Diego,California,Standard,900,32,2.67
+8FDe5cB6D49DeC7,5158 MG Road,New York,New York,Basic,600,19,1.58
+F74DdDD5F7F54fB,8863 Back str market,New York,New York,Basic,600,26,2.17
+Ad72D5Da8E12cCe,2432 3rd Ave,San Jose,California,Standard,900,52,4.33
+6D82b422Be1D4c3,9825 4th Lane,Chicago,Illinois,Premium,1200,55,4.58
+7Ba504E895357cc,194 1st Lane,San Diego,California,Standard,900,14,1.17
+ecA4Ef00c19A4bC,3923 4th Lane,Los Angeles,California,Enterprise,1600,9,0.75
+99dCb0A9759EF46,9320 Lft Backward View,Houston,Texas,Basic,600,14,1.17
+9B8e3a2fee3cAa6,2186 1st Lane,Phoenix,Arizona,Enterprise,1600,28,2.33
+fbaa79FA7a650c4,671 MG Road,Phoenix,Arizona,Premium,1200,53,4.42
+d383eb68eCfF8AB,1782 3rd Ave,San Antonio,Texas,Enterprise,1600,17,1.42
+26c137aa42DBAc6,3175 MG Road,Houston,Texas,Basic,600,37,3.08
+fccF8FE5dCE4D59,2360 Lft Backward View,San Diego,California,Premium,1200,44,3.67
+48fb1FBfB3dBDEb,1235 3rd Blvd,Chicago,Illinois,Enterprise,1600,5,0.42
+F7B4d9818ac74d7,4927 Main St,San Jose,California,Standard,900,18,1.5
+Ea538afFB2dBc6B,8600 2nd Ave,San Jose,California,Standard,900,24,2
+a30bDbC95D0d705,6816 2nd Ave,San Diego,California,Basic,600,47,3.92
+C50fCDD7Afa9E32,4611 1st Lane,Houston,Texas,Premium,1200,12,1
+C793220Fa1770EC,4813 Back str market,San Antonio,Texas,Basic,600,20,1.67
+eD3dc748191667D,8188 Main St,San Jose,California,Premium,1200,17,1.42
+4a0631B02AEAF7C,4177 2nd Ave,San Diego,California,Standard,900,42,3.5
+95D739e9c8d4aE0,2121 3rd Ave,Los Angeles,California,Standard,900,3,0.25
+6024edb2edeb7c4,773 Park Ln,Chicago,Illinois,Premium,1200,47,3.92
+a7F0cbBfBeFf26f,144 Park Ln,Dallas,Texas,Premium,1200,32,2.67
+acDbFD92Ee2FeB8,4703 6th avenue Lane,Phoenix,Arizona,Enterprise,1600,52,4.33
+dA3ca2BC9A013C4,1923 1st Lane,San Antonio,Texas,Standard,900,40,3.33
+3C2ceB0d1bb0AEf,3061 Park Ln,Houston,Texas,Enterprise,1600,43,3.58
+53FBC20712d53ac,1243 Back str market,Los Angeles,California,Enterprise,1600,52,4.33
+De1eA6b59ca6C82,9937 1st Lane,Dallas,Texas,Enterprise,1600,37,3.08
+8Ba6D294fa7bc5d,2477 2nd Ave,San Antonio,Texas,Enterprise,1600,10,0.83
+Fee350d28Da6Dc1,3813 Main St,Philadelphia,Pennsylvania,Basic,600,43,3.58
+2e76eee9EA4b6Db,3520 Main St,Chicago,Illinois,Enterprise,1600,55,4.58
+acEbcF58ce7aa6b,8009 3rd Ave,Houston,Texas,Enterprise,1600,14,1.17
+b7DadcD2F6Be5ff,8553 2nd Ave,San Diego,California,Enterprise,1600,28,2.33
+F510cC6fDd44EF0,7976 4th Lane,Houston,Texas,Standard,900,58,4.83
+0CFB73F9080ac5E,7179 1st Lane,San Antonio,Texas,Premium,1200,59,4.92
+631ED4Fac4DC90a,8199 1st Lane,San Jose,California,Standard,900,42,3.5
+68F4DeB57AefAa2,2184 Back str market,Philadelphia,Pennsylvania,Enterprise,1600,31,2.58
+Cc5e54AbB7b48AB,2237 Main St,San Antonio,Texas,Premium,1200,25,2.08
+FaCCc5BDdB6F632,6586 2nd Ave,New York,New York,Enterprise,1600,37,3.08
+4eC09cc8c11104A,5030 Back str market,New York,New York,Enterprise,1600,32,2.67
+0FEba438cbEC2AA,9629 Lft Backward View,San Antonio,Texas,Basic,600,39,3.25
+cE4464CEA23dcA6,1371 Main St,San Jose,California,Standard,900,54,4.5
+554e884588F330F,3459 Main St,San Jose,California,Enterprise,1600,52,4.33
+e2CE016B6d7A277,8985 6th avenue Lane,Phoenix,Arizona,Enterprise,1600,16,1.33
+5EA4B3166F4cf23,1968 1st Lane,Houston,Texas,Premium,1200,48,4
+92f8b67ff4AAf7d,8526 2nd Ave,San Jose,California,Enterprise,1600,31,2.58
+3d6fcc6d86ddB5b,670 1st Lane,San Jose,California,Standard,900,40,3.33
+2bd75B8C4Ceb4EA,581 Park Ln,San Jose,California,Standard,900,13,1.08
+2Cd03BEcE9b3B93,8520 6th avenue Lane,San Diego,California,Standard,900,23,1.92
+7fa3e97AA6FBeF0,9317 6th avenue Lane,Los Angeles,California,Basic,600,20,1.67
+D48515F88dfCEfE,8917 Back str market,Philadelphia,Pennsylvania,Standard,900,48,4
+A174615D3B6CEB3,1297 2nd Ave,San Jose,California,Standard,900,19,1.58
+24AcadCe2aFA9Ab,432 6th avenue Lane,San Antonio,Texas,Standard,900,21,1.75
+AbB566FdD9f2bEd,4912 Main St,Phoenix,Arizona,Premium,1200,46,3.83
+9aAA64EEF8BeC99,9999 2nd Ave,San Diego,California,Enterprise,1600,42,3.5
+1fa5ecF2B956B38,9571 3rd Blvd,Chicago,Illinois,Premium,1200,37,3.08
+DD8A1093b4FBF5D,5739 Back str market,Chicago,Illinois,Enterprise,1600,9,0.75
+cA6c4bABcf1EfFa,5908 3rd Ave,New York,New York,Enterprise,1600,18,1.5
+ecBFFFfDe1dCCAA,1795 Lft Backward View,New York,New York,Premium,1200,48,4
+8A18c6fe8FA8D33,8667 3rd Ave,Los Angeles,California,Standard,900,15,1.25
+e25dE50b07fDEB4,3115 Park Ln,Chicago,Illinois,Basic,600,8,0.67
+cd4Fb82e077Acf3,9130 2nd Ave,San Diego,California,Standard,900,31,2.58
+1F27dcCcD8058C9,7547 Park Ln,San Diego,California,Standard,900,45,3.75
+F507D32F7b2D998,9151 3rd Blvd,Dallas,Texas,Premium,1200,50,4.17
+b663aFfec5690Fb,3149 2nd Ave,San Antonio,Texas,Standard,900,40,3.33
+1Ccdf299FF3FA0b,4770 Main St,San Antonio,Texas,Enterprise,1600,58,4.83
+19BEfD0c72c6Dd8,8783 3rd Blvd,San Jose,California,Standard,900,38,3.17
+19BEfD0c71c5Dd9,8783 4th Blvd II,San Jose,California,Standard,900,36,3.15
+ecA4Ef00c19A4bC,3923 4th Lane,Los Angeles,California,Enterprise,1600,9,0.75
+99dCb0A9759EF46,9320 Lft Backward View,Houston,Texas,Basic,600,14,1.17
+9B8e3a2fee3cAa6,2186 1st Lane,Phoenix,Arizona,Enterprise,1600,28,2.33
+fbaa79FA7a650c4,671 MG Road,Phoenix,Arizona,Premium,1200,53,4.42
+d383eb68eCfF8AB,1782 3rd Ave,San Antonio,Texas,Enterprise,1600,17,1.42
+26c137aa42DBAc6,3175 MG Road,Houston,Texas,Basic,600,37,3.08
+fccF8FE5dCE4D59,2360 Lft Backward View,San Diego,California,Premium,1200,44,3.67
+48fb1FBfB3dBDEb,1235 3rd Blvd,Chicago,Illinois,Enterprise,1600,5,0.42
+F7B4d9818ac74d7,4927 Main St,San Jose,California,Standard,900,18,1.5
+Ea538afFB2dBc6B,8600 2nd Ave,San Jose,California,Standard,900,24,2
+a30bDbC95D0d705,6816 2nd Ave,San Diego,California,Basic,600,47,3.92
+C50fCDD7Afa9E32,4611 1st Lane,Houston,Texas,Premium,1200,12,1
+C793220Fa1770EC,4813 Back str market,San Antonio,Texas,Basic,600,20,1.67
+eD3dc748191667D,8188 Main St,San Jose,California,Premium,1200,17,1.42
+4a0631B02AEAF7C,4177 2nd Ave,San Diego,California,Standard,900,42,3.5
+95D739e9c8d4aE0,2121 3rd Ave,Los Angeles,California,Standard,900,3,0.25
+6024edb2edeb7c4,773 Park Ln,Chicago,Illinois,Premium,1200,47,3.92
+a7F0cbBfBeFf26f,144 Park Ln,Dallas,Texas,Premium,1200,32,2.67
+acDbFD92Ee2FeB8,4703 6th avenue Lane,Phoenix,Arizona,Enterprise,1600,52,4.33
+dA3ca2BC9A013C4,1923 1st Lane,San Antonio,Texas,Standard,900,40,3.33

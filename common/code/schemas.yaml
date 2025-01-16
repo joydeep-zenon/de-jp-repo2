@@ -5,7 +5,7 @@ collections:
   header: true
   format: delimitedFile
   filePatterns:
-  - /home/deuser/workspaces/dejpexistingsol/jp_13-JAN_25/common/common/people-120-records_wo_space.csv
+  - /home/deuser/workspaces/dejpexistingsol/JP_15-JAN-25/common/small_DS/people-5-records_wo_space.csv
   schema: ppl_records_schema
 - name: testing
   header: true

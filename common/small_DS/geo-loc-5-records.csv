@@ -1,0 +1,6 @@
+UserId,Address,City,State,SubscriptionPlan,SubscriptionAmount,SubscriptionTenureInMonths,SubscriptionTenureInYrs
+9CEA5eB6C5691e8,7092 1st Lane,San Jose,California,Premium,1200,8,0.67
+A7CCb36dCBeed5f,3571 6th avenue Lane,Los Angeles,California,Enterprise,1600,12,1
+1eDdd4F608701A9,6546 2nd Ave,Los Angeles,California,Premium,1200,43,3.58
+f0765E2dc1F8e12,6206 3rd Blvd,Dallas,Texas,Basic,600,7,0.58
+A7CCb36dCBeed5f,3571 6th avenue Lane,Los Angeles,California,Enterprise,1600,12,1
