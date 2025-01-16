@@ -15,5 +15,31 @@ views:
       columns:
       - Price Details
       type: "Common:String"
+  - as: dedup
+    operation: dedup
+    source: selectFields
+    groupKeys:
+    - Facing
+    - Floor
+    sortKeys:
+    - Per Unit Rate desc
+  - operation: dataQuality
+    source: dedup
+    as: dataQuality
+    reportKeys:
+    - Floor
+    checks:
+    - name: id ends in 0
+      if: Floor % 4 == 0
+      thenReject: true
+      reportFields:
+        before:
+        - Floor
+    rejectAs: rejects
+    reportAs: report
   outputDefinition:
     type: delimited
+  persist:
+    variables:
+    - name: dedup
+      viewDefaultOutput: false
