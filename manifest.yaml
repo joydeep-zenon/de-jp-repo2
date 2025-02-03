@@ -1,6 +1,6 @@
 displayName: jptestproject
 projectKey: jptestproject
-version: 1.0.1
+version: 1.0.0
 modules:
 - fileSearchPaths:
   - code
@@ -17,4 +17,3 @@ modules:
   dependencies:
   - common
   - data
-insightVersion: StudioMVersion-0.0
