@@ -7,7 +7,30 @@ collections:
   filePatterns:
   - /home/deuser/workspaces/dejpexistingsol/JP_15-JAN-25/common/small_DS/geo-loc-5-records.csv
   schema: geo_loc_schema
+- name: ppl_records_wo_Index
+  header: true
+  format: delimitedFile
+  filePatterns:
+  - /home/deuser/workspaces/dejpexistingsol/JP_15-JAN-25/common/small_DS/people-5-records_wo_Index.csv
+  schema: ppl_records_woIndex_schema
 schemas: 
+- name: Reference_ppl_recd_schema
+  columns:
+  - name: UserId
+    typeID: Common:String
+  - name: FirstName
+    typeID: Common:String
+  - name: LastName
+    typeID: Common:String
+  - name: Sex
+    typeID: Common:String
+  - name: Dateofbirth
+    typeID: Common:String
+  - name: Age
+    typeID: Common:Integer
+  - name: Income
+    typeID: Common:Integer
+        
 - name: geo_loc_schema
   columns:
   - name: UserId
@@ -27,40 +50,90 @@ schemas:
   - name: SubscriptionTenureInYrs
     typeID: Common:Float
 
+- name: ppl_records_woIndex_schema
+  columns:
+  - name: UserId
+    typeID: Common:String
+  - name: FirstName
+    typeID: Common:String
+  - name: LastName
+    typeID: Common:String
+  - name: Sex
+    typeID: Common:String
+  - name: Email
+    typeID: Common:String
+  - name: Dateofbirth
+    typeID: Common:String
+  - name: Age
+    typeID: Common:Integer
+  - name: Income
+    typeID: Common:Integer
 views: 
+- name: Read_View
+  engine: SPARK
+  transformations:
+  - as: readView
+    operation: readView
+    view: new_view
+    variant: ALL
+    latestNVariants: ""
+    label: ""
+    useVersioned: false
+    softDependency: true
+    schema: Reference_ppl_recd_schema
+  outputDefinition:
+    type: delimited
 - name: map_view
   engine: SPARK
   transformations:
   - as: readCollection_ppl_records
     operation: readCollection
     enforceSchema: true
-    collection: schemas.ppl_records_collection
-  - as: readCollection_geo_loc
-    operation: readCollection
-    enforceSchema: true
-    collection: geo_loc_collection
-  - as: dedup_geo_loc
-    operation: dedup
-    source: readCollection_geo_loc
-    rejectAs: geo_loc_duplicate
-    keep: FIRST
-    groupKeys:
-    - UserId
-  - as: dedup_ppl_rec
+    collection: ppl_records_wo_Index
+    partitionColumn: ""
+    rejectAs: ""
+    rejectMessageFieldName: ""
+  #- as: readCollection_geo_loc
+  #  operation: readCollection
+  #  enforceSchema: true
+  #  collection: geo_loc_collection
+  - as: dedup_readCollection_ppl_records
     operation: dedup
     source: readCollection_ppl_records
-    rejectAs: ppl_records_duplicate
     groupKeys:
     - UserId
     keep: FIRST
-  - as: join
-    operation: join
-    left: dedup_ppl_rec
-    right: dedup_geo_loc
-    mode: LEFT_SEMI
-    keys:
-    - leftKey: UserId
-      rightKey: UserId
-    mergeLeftAndRightKeys: false
+  - as: deriveInsights
+    operation: deriveInsights
+    language: EXPRESSION
+    source: dedup_readCollection_ppl_records
+    references: {}
+    expressions: SrCitigen = Age >= 65;
   outputDefinition:
     type: delimited
+  persist:
+    label: FILTER_INSIGHT_LABEL
+    historical:
+      mode: RECOMPUTE
+- name: new_view
+  engine: SPARK
+  transformations:
+  - as: readCollection_ppl_records
+    operation: readCollection
+    enforceSchema: true
+    collection: ppl_records_wo_Index
+    partitionColumn: ""
+    rejectAs: ""
+    rejectMessageFieldName: ""
+  - as: dedup_readCollection_ppl_records
+    operation: dedup
+    source: readCollection_ppl_records
+    groupKeys:
+    - UserId
+    keep: FIRST
+  outputDefinition:
+    type: delimited
+  persist:
+    label: FILTER_INSIGHT_LABEL
+    historical:
+      mode: RECOMPUTE

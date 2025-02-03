@@ -1,15 +1,13 @@
-library: schemas
+library: View5
 
 collections: 
-- name: ppl_records_collection
-  header: true
-  format: delimitedFile
+- name: ppl_records_coll_a
+  format: avro
   filePatterns:
-  - /home/deuser/workspaces/dejpexistingsol/JP_15-JAN-25/common/small_DS/people-5-records_wo_space.csv
-  schema: ppl_records_schema
-  multiline: true
+  - /home/deuser/workspaces/dejpexistingsol/JP_15-JAN-25/common/avro8_dataset/ppl-5-records_wo_space.avro
+  schema: ppl_records_wspace_schema_avro
 schemas: 
-- name: ppl_records_schema
+- name: ppl_records_wspace_schema_avro
   columns:
   - name: Index
     typeID: Common:Integer
@@ -32,6 +30,16 @@ schemas:
   - name: Age
     typeID: Common:Integer
   - name: Income
-    typeID: Common:Integer
+    typeID: Common:Long
   - name: TaxSubmitted
-    typeID: Common:Integer
+    typeID: Common:Long
+views: 
+- name: ppl_record_view_avro
+  engine: SPARK
+  transformations:
+  - as: readCollection
+    operation: readCollection
+    enforceSchema: true
+    collection: ppl_records_coll_a
+  outputDefinition:
+    type: avro8

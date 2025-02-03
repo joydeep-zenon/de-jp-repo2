@@ -1,6 +1,36 @@
 library: data
 
+collections: 
+- name: realestate_collection_magicbrick
+  header: true
+  format: delimitedFile
+  filePatterns:
+  - /home/deuser/workspaces/dejpexistingsol/JP_15-JAN-25/common/common/Realestate_result_magicbrick_DE.csv
+  schema: realestate_schema_magicbrick
+  multiline: true
 schemas: 
+- name: real_estate_schema_v2
+  columns:
+  - name: Broker Details
+    typeID: Common:String
+  - name: Facing
+    typeID: Common:String
+  - name: Floor
+    typeID: Common:String
+  - name: Locality
+    typeID: Common:String
+  - name: Per Unit Rate
+    typeID: Common:String
+  - name: Price Details
+    typeID: Common:String
+  - name: Project Name
+    typeID: Common:String
+  - name: Property Additional Details
+    typeID: Common:String
+  - name: Square Feet Area
+    typeID: Common:String
+  - name: Transaction Details
+    typeID: Common:String
 - name: realestate_schema_magicbrick
   columns:
   - name: Broker Details
@@ -23,3 +53,13 @@ schemas:
     typeID: Common:String
   - name: Transaction Details
     typeID: Common:String
+views: 
+- name: real_estate_View
+  engine: SPARK
+  transformations:
+  - as: readCollection
+    operation: readCollection
+    enforceSchema: true
+    collection: realestate_collection_magicbrick
+  outputDefinition:
+    type: avro8

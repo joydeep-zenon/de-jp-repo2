@@ -26,14 +26,3 @@ views:
     variables:
     - name: dedup
     - name: duplicate_records
-- name: testing_view
-  engine: SPARK
-  transformations:
-  - as: readView
-    operation: readView
-    view: ppl_record_view
-    variant: ALL
-    label: DEDUP_TEST_LABEL
-  outputDefinition:
-    type: delimited
-    

@@ -1,0 +1,8 @@
+library: workflow_v2
+
+automate: 
+- name: workflow_ppl_record_summary
+  schedule: MANUAL
+  includeDependencies: true
+  include:
+  - view: views_v2.Read_View

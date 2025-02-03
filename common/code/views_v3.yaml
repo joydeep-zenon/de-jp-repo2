@@ -1,0 +1,83 @@
+library: views_v3
+
+collections: 
+- name: ppl_records_wspace_collection
+  header: true
+  format: delimitedFile
+  filePatterns:
+  - /home/deuser/workspaces/dejpexistingsol/JP_15-JAN-25/common/common/people-120-records.csv
+  schema: ppl_records_wspace_schema
+schemas: 
+- name: ppl_records_wspace_schema
+  columns:
+  - name: Index
+    typeID: Common:Integer
+  - name: User Id
+    typeID: Common:String
+  - name: First Name
+    typeID: Common:String
+  - name: Last Name
+    typeID: Common:String
+  - name: Sex
+    typeID: Common:String
+  - name: Email
+    typeID: Common:String
+  - name: Phone
+    typeID: Common:String
+  - name: Date of birth
+    typeID: Common:String
+  - name: Job Title
+    typeID: Common:String
+  - name: Age
+    typeID: Common:Integer
+  - name: Income
+    typeID: Common:Integer
+  - name: Tax Submitted
+    typeID: Common:Integer
+
+views: 
+- name: check_map_view
+  engine: SPARK
+  transformations:
+  - as: readCollection
+    operation: readCollection
+    enforceSchema: true
+    collection: ppl_records_wspace_collection
+  - as: map
+    operation: map
+    mappings: 
+    -
+      target: User_Id
+      foreach:
+        type: "Common:String"
+        pattern: User\s+Id
+    - source: First Name
+      foreach: {}
+      target: First_Name
+    - source: Last Name
+      foreach: {}
+      target: Last_Name
+    - source: Date of birth
+      foreach: {}
+      target: Date_of_birth
+    - source: Job Title
+      foreach: {}
+      target: Job_Title
+    - source: Tax Submitted
+      foreach: {}
+      target: Tax_Submitted
+    source: readCollection
+  - as: dedup
+    operation: dedup
+    source: map
+    rejectAs: duplicate_post_map
+    groupKeys:
+    - User_Id
+    - Last_Name
+    keep: ALL_FIRST
+    sortKeys:
+    - First_Name asc
+  outputDefinition:
+    type: delimited
+  
+  

@@ -1,0 +1,52 @@
+library: views_v4
+
+collections: 
+- name: geo_loc_coll_p
+  format: parquet
+  filePatterns:
+  - /home/deuser/workspaces/dejpexistingsol/JP_15-JAN-25/common/parquet_dataset/geo-loc-5-records_p.parquet
+  schema: geo_loc_schema_parquet
+schemas: 
+- name: geo_loc_schema_parquet
+  columns:
+  - name: UserId
+    typeID: Common:String
+  - name: Address
+    typeID: Common:String
+  - name: City
+    typeID: Common:String
+  - name: State
+    typeID: Common:String
+  - name: SubscriptionPlan
+    typeID: Common:String
+  - name: SubscriptionAmount
+    typeID: Common:Long
+  - name: SubscriptionTenureInMonths
+    typeID: Common:Long
+  - name: SubscriptionTenureInYrs
+    typeID: Common:Real
+views: 
+- name: geo_loc_view_parquet
+  engine: SPARK
+  transformations:
+  - as: readCollection
+    operation: readCollection
+    enforceSchema: true
+    collection: geo_loc_coll_p
+  - as: dedup
+    operation: dedup
+    source: readCollection
+    groupKeys:
+    - UserId
+    sortKeys:
+    - SubscriptionAmount asc
+    keep: FIRST
+  - as: limitRows
+    operation: limitRows
+    skip: 1
+    count: 2
+    source: dedup
+    sortKeys:
+    - UserId asc
+  outputDefinition:
+    type: parquet

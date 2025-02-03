@@ -1,0 +1,72 @@
+library: convert_fields
+
+collections: 
+- name: ppl_records_convert_fields
+  header: true
+  format: delimitedFile
+  filePatterns:
+  - /home/deuser/workspaces/dejpexistingsol/JP_15-JAN-25/common/convert_fields/people-5-rec_convertFields.csv
+  schema: ppl_records_schema_convert_fields
+schemas: 
+- name: ppl_records_schema_convert_fields
+  columns:
+  - name: Index
+    typeID: Common:String
+  - name: UserId
+    typeID: Common:String
+  - name: FirstName
+    typeID: Common:String
+  - name: LastName
+    typeID: Common:String
+  - name: Sex
+    typeID: Common:String
+  - name: Email
+    typeID: Common:String
+  - name: Phone
+    typeID: Common:String
+  - name: Dateofbirth
+    typeID: Common:String
+  - name: JobTitle
+    typeID: Common:String
+  - name: Age
+    typeID: Common:String
+  - name: Income
+    typeID: Common:String
+  - name: TaxSubmitted
+    typeID: Common:String
+
+views: 
+- name: conver_fields_view
+  engine: SPARK
+  transformations:
+  - as: readCollection
+    operation: readCollection
+    enforceSchema: true
+    collection: ppl_records_convert_fields
+  - as: convertFields
+    operation: convertFields
+    rejectMessageFieldName: message
+    source: readCollection
+    schema: schemas.ppl_records_schema
+  - as: splitField
+    operation: splitField
+    splitPattern: /
+    source: convertFields
+    column: Dateofbirth
+    mappings: 
+    - ind: 1
+      fieldName: month
+    - ind: 2
+      fieldName: day
+    - ind: 3
+      fieldName: year
+  - as: split_Phone_number
+    operation: splitField
+    source: splitField
+    column: Email
+    splitPattern: '@'
+    mappings:
+    - ind: 1
+      fieldName: Domain_with_com
+  outputDefinition:
+    type: delimited
